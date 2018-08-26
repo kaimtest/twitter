@@ -14,13 +14,13 @@
     </div>
     <input type="hidden" name="_csrf" value="${_csrf.token}"/>
     <#if !isRegisterForm><a href="/registration">Add new user</a></#if>
-    <button type="submit" class="btn btn-primary"><#if isRegisterForm>Creat<#else >Sign in</#if></button>
+    <button type="submit" class="btn btn-primary ml-2"><#if isRegisterForm>Creat<#else >Sign in</#if></button>
 </form>
 </#macro>
 
 <#macro logout>
 <form action="/logout" method="post">
     <input type="hidden" name="_csrf" value="${_csrf.token}" />
-    <input type="submit" value="Sign Out"/>
+    <input type="submit" value="Sign Out" class="btn btn-primary"/>
 </form>
 </#macro>
