@@ -22,7 +22,7 @@ public class HaupController {
     @Autowired
     private MessageRepo messageRepo;
 
-    @Value("${upload.path}")// берем из application.properties путь к файлу и сохраняем в переменную
+    @Value("${upload.path}")// берем из application-test.properties путь к файлу и сохраняем в переменную
     String uploadPath;
 
     @GetMapping("/")

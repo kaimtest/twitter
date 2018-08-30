@@ -5,7 +5,7 @@
     <div class="form-group col-md-6">
         <form method="get" action="/main" class="form-inline">
             <input type="text" name="filter" class="form-control" value="${filter?ifExists}"
-                   placeholder="Search by tag">
+                   placeholder="Search by tag" />
             <button type="submit" class="btn btn-primary ml-2">Search</button>
         </form>
     </div>
@@ -22,11 +22,11 @@
                 <input type="text" class="form-control" name="text" placeholder="Введите сообщение"/>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="tag" placeholder="Тэг">
+                <input type="text" class="form-control" name="tag" placeholder="Тэг" />
             </div>
             <div class="form-group">
                 <div class="custom-file">
-                    <input type="file" name="file" id="customFile">
+                    <input type="file" name="file" id="customFile" />
                     <label class="custom-file-label" for="customFile">Choose file</label>
                 </div>
             </div>
@@ -37,15 +37,16 @@
         </form>
     </div>
 </div>
-<div class="card-columns">
+<div class="card-columns" id="message-list">
     <#list messages as message>
-        <div class="card my-3">
+        <div class="card my-3" data-id="${message.id}">
             <#if message.filename??>
-                <img src="/img/${message.filename}" class="card-img-top">
+                <img src="/img/${message.filename}" class="card-img-top" />
             </#if>
-            <div class="m-2"
+            <div class="m-2">
             <span>${message.text}</span>
             <i>${message.tag}</i>
+            </div>
         </div>
         <div class="card-footer text-muted">
         ${message.authorName}

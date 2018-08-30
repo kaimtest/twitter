@@ -28,7 +28,7 @@ public class Messages {
     }
 
     public String getAuthorName() {
-        return author != null ? author.getUsername() : "<None>";
+        return author != null ? author.getUsername() : "None";
     }
 
     public User getAuthor() {
